@@ -37,3 +37,26 @@ Remove all instances of `val` in-place from array `nums` and return the new leng
 - **Space:** `O(1)` (in-place, no extra array)  
 
 ---
+---
+
+## [26. Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150)
+
+**Problem:**  
+Given a sorted array `nums`, remove the duplicates in-place such that each unique element appears only once. Return the new length `k`.  
+- The relative order of elements should be kept the same.  
+- Must use **O(1)** extra space.  
+
+### Intuition  
+- Since the array is sorted, duplicates will always be **adjacent**.  
+- Use **two pointers**:  
+  - `i` → scans through array  
+  - `k` → tracks the position of the next unique element  
+- Compare `nums[i]` with the **last unique element** (`nums[k-1]`).  
+- If different, place it at `nums[k]` and move `k` forward.  
+
+### Complexity  
+- **Time:** `O(n)` (single pass)  
+- **Space:** `O(1)` (in-place, no extra data structures)  
+
+---
+---
