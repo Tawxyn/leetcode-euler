@@ -84,3 +84,23 @@ Given a sorted array `nums`, remove duplicates in-place such that **each element
 
 ---
 ---
+
+## [189. Rotate Array](https://leetcode.com/problems/rotate-array/description/?envType=study-plan-v2&envId=top-interview-150)
+
+**Problem:**  
+Given an integer array `nums`, rotate the array to the right by `k` steps, where `k` is non-negative.  
+
+### Intuition  
+- Rotating by `k` means the last `k` elements move to the front.  
+- A neat trick: **use array reversal**.  
+  1. Reverse the entire array.  
+  2. Reverse the first `k` elements.  
+  3. Reverse the remaining `n - k` elements.  
+- This reorders the array correctly in-place.  
+
+### Complexity  
+- **Time:** `O(n)` (each reversal takes linear time, total still `O(n)`)  
+- **Space:** `O(1)` (in-place swaps only)  
+
+---
+---
