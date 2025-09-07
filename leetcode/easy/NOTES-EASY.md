@@ -148,3 +148,21 @@ Given a pattern string `pattern` and a space-separated string `s`, determine if 
 
 ---
 ---
+
+# [242. Valid Anagram](https://leetcode.com/problems/valid-anagram/description/?envType=study-plan-v2&envId=top-interview-150)
+
+**Problem:**  
+Given two strings `s` and `t`, return `True` if `t` is an anagram of `s`, otherwise return `False`.  
+(Each character must appear the same number of times in both strings.)
+
+### Intuition  
+- If the lengths differ, they can’t be anagrams → return `False`.  
+- Use two **hash maps** (`count_s`, `count_t`) to count character frequencies in a single pass.  
+- After counting, compare the two dictionaries: if equal → anagrams; else → not.
+
+### Complexity  
+- **Time:** `O(n)` where `n = len(s)` (single pass to count + `O(k)` compare, `k` distinct chars).  
+- **Space:** `O(k)` for the frequency maps (bounded by number of unique characters).
+
+---
+---
