@@ -80,3 +80,24 @@ Given an integer array `nums`, rotate the array to the right by `k` steps, where
 
 ---
 ---
+
+# [383. Ransom Note](https://leetcode.com/problems/ransom-note/?envType=study-plan-v2&envId=top-interview-150)
+
+**Problem:**  
+Given two strings `ransomNote` and `magazine`, return `True` if `ransomNote` can be constructed by using the letters from `magazine`. Each letter in `magazine` can only be used once.  
+
+### Intuition  
+- First, if `ransomNote` is longer than `magazine`, it’s impossible → return `False`.  
+- Use a **frequency counter** (dictionary) to track available characters in `magazine`.  
+- Loop through `ransomNote`:  
+  - If character not available in counter → return `False`.  
+  - If available but only one left → remove it from counter.  
+  - Otherwise → decrement its count.  
+- If all characters matched, return `True`.  
+
+### Complexity  
+- **Time:** `O(m + n)` (iterate once over `magazine` and once over `ransomNote`)  
+- **Space:** `O(k)` (at most 26 letters in dictionary, so effectively `O(1)`)  
+
+---
+---
