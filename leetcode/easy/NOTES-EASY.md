@@ -124,3 +124,27 @@ Two strings are isomorphic if the characters in `s` can be replaced to get `t`, 
 
 ---
 ---
+
+# [290. Word Pattern](https://leetcode.com/problems/word-pattern/description/?envType=study-plan-v2&envId=top-interview-150)
+
+**Problem:**  
+Given a pattern string `pattern` and a space-separated string `s`, determine if `s` follows the same pattern.  
+- Each character in `pattern` must map to exactly one word in `s`.  
+- No two different characters may map to the same word (bijection).  
+
+### Intuition  
+- Split `s` into a list of `words`. If `len(pattern) != len(words)`, return `False`.  
+- Use **two hash maps** to enforce a one-to-one mapping:  
+  - `charToWord`: pattern char → word  
+  - `wordToChar`: word → pattern char  
+- Iterate pairs `(c, w)` with `zip(pattern, words)`:  
+  - If an existing mapping conflicts (either direction), return `False`.  
+  - Otherwise, record/confirm the mapping in both maps.  
+- If the scan finishes with no conflicts, return `True`.
+
+### Complexity  
+- **Time:** `O(n)` where `n = len(pattern)` (single pass; hashmap ops amortized `O(1)`).  
+- **Space:** `O(k)` for unique chars/words stored in the maps.
+
+---
+---
