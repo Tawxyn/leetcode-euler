@@ -101,3 +101,26 @@ Given two strings `ransomNote` and `magazine`, return `True` if `ransomNote` can
 
 ---
 ---
+
+# [205. Isomorphic Strings](https://leetcode.com/problems/isomorphic-strings/description/?envType=study-plan-v2&envId=top-interview-150)
+
+**Problem:**  
+Given two strings `s` and `t`, return `True` if they are *isomorphic*.  
+Two strings are isomorphic if the characters in `s` can be replaced to get `t`, with each character mapping one-to-one (no two characters map to the same character).
+
+### Intuition  
+- Need to check if characters in `s` map consistently to characters in `t`, and vice versa.  
+- Use **two hash maps**:  
+  - `mapST` → maps characters from `s` to `t`.  
+  - `mapTS` → maps characters from `t` to `s`.  
+- While iterating:  
+  - If a mapping exists but doesn’t match, return `False`.  
+  - Otherwise, update the mapping.  
+- If no conflicts are found, return `True`.
+
+### Complexity  
+- **Time:** `O(n)` (single pass through both strings of length `n`)  
+- **Space:** `O(k)` (at most all unique characters stored in maps, bounded by alphabet size)  
+
+---
+---
