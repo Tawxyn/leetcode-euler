@@ -166,3 +166,28 @@ Given two strings `s` and `t`, return `True` if `t` is an anagram of `s`, otherw
 
 ---
 ---
+
+# [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/?envType=study-plan-v2&envId=top-interview-150)
+
+**Problem:**  
+You are given an array `prices` where `prices[i]` is the price of a stock on day `i`.  
+- You want to maximize profit by choosing one day to **buy** and a later day to **sell**.  
+- Return the maximum profit you can achieve.  
+- If no profit is possible, return `0`.
+
+### Intuition  
+- Track the **minimum price so far** as the potential buy price.  
+- As you scan through prices:  
+  - If today’s price is lower than `min_price`, update `min_price`.  
+  - Otherwise, calculate profit = `price - min_price` and update `max_profit` if higher.  
+- This avoids the brute force `O(n²)` approach of checking every pair.  
+- Conceptually, this is a **two-pointer approach**:  
+  - One pointer (buy) lags behind, storing the lowest price.  
+  - The other pointer (sell) scans forward, checking profits.
+
+### Complexity  
+- **Time:** `O(n)` (single pass through array).  
+- **Space:** `O(1)` (only two variables needed).
+
+---
+---
