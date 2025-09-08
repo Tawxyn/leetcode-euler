@@ -22,7 +22,7 @@ Given a sorted array `nums`, remove duplicates in-place such that **each element
 ---
 ---
 
-## [80. Remove Duplicates from Sorted Array II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/?envType=study-plan-v2&envId=top-interview-150)
+## [122. Best Time to Buy and Sell Stock II](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/description/?envType=study-plan-v2&envId=top-interview-150)
 
 **Problem:**  
 You are given an array `prices` where `prices[i]` is the price of a stock on day `i`.  
