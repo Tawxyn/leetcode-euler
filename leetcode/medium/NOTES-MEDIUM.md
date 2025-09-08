@@ -48,3 +48,26 @@ You are given an array `prices` where `prices[i]` is the price of a stock on day
 
 ---
 ---
+
+# [55. Jump Game](https://leetcode.com/problems/jump-game/?envType=study-plan-v2&envId=top-interview-150)
+
+**Problem:**  
+You are given an integer array `nums` where each element `nums[i]` represents the maximum jump length from index `i`.  
+- You start at index `0`.  
+- Return `True` if you can reach the **last index**, otherwise `False`.
+
+---
+
+### Intuition  
+- Use a **greedy approach**: track the **farthest index** you can reach so far.  
+- Initialize `max_reach = 0`.  
+- Iterate through the array:  
+  1. If the current index `i` is greater than `max_reach`, you are **stuck** → return `False`.  
+  2. Update `max_reach = max(max_reach, i + nums[i])`.  
+  3. If `max_reach >= last_index`, you can already reach the end → return `True`.  
+- If the loop finishes without getting stuck, return `True`.  
+
+This works because at each index, you only need to know the farthest place reachable so far, not the exact jump path.
+
+---
+---
