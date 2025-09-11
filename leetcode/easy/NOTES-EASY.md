@@ -191,3 +191,22 @@ You are given an array `prices` where `prices[i]` is the price of a stock on day
 
 ---
 ---
+
+# [125. Valid Palindrome](https://leetcode.com/problems/valid-palindrome/?envType=study-plan-v2&envId=top-interview-150)
+
+**Problem:**  
+Given a string `s`, return `True` if it is a palindrome, considering only alphanumeric characters and ignoring cases.  
+
+### Intuition  
+- Use **two pointers** (`left` and `right`) starting from the beginning and end of the string.  
+- Skip non-alphanumeric characters (`.isalnum()` check).  
+- Compare characters at both pointers in lowercase form.  
+- If mismatch found → return `False`.  
+- If pointers cross without mismatch → return `True`.  
+
+### Complexity  
+- **Time:** `O(n)` (each character checked at most once).  
+- **Space:** `O(1)` (in-place, just pointers).
+
+---
+---
